@@ -11,11 +11,11 @@
     # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
     # 2. API Proxy / Subdirectory handling
-    # If the backend is in /gyanam-backend/public but you want /api requests
+    # If the backend is in /backend/public but you want /api requests
     # to go there automatically:
-    # If you hit gyanam/api/v1/, redirect to gyanam/gyanam-backend/public/api/v1/
+    # If you hit gyanam/api/v1/, redirect to gyanam/backend/public/api/v1/
     # This allows you to use a cleaner URL: https://yourdomain.com/gyanam/api/v1/
-    RewriteRule ^api/v1/(.*)$ gyanam-backend/public/api/v1/$1 [L,QSA]
+    RewriteRule ^api/v1/(.*)$ backend/public/api/v1/$1 [L,QSA]
 
     # 3. Handle SPA routes for both Admin and Student
     # If a file exists, serve it

@@ -14,7 +14,7 @@ export const CONFIG = {
     // In production, we assume the backend is hosted at the same domain/IP.
     API_BASE_URL: isLocal
         ? 'http://127.0.0.1:8000/api/v1'
-        : `${window.location.origin}/gyanam/exam_portal/gyanam-backend/public/index.php/api/v1`,
+        : `${window.location.origin}/gyanam/exam_portal/backend/public/index.php/api/v1`,
 
     // WebSocket Configuration (Reverb)
     WS_HOST: window.location.hostname,
