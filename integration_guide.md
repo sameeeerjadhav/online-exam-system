@@ -56,11 +56,11 @@ The student portal expects the student to log in using their `Student ID` (which
 - **`/src/modules/`**: Contains the logic for different sections. 
     - `StudentsModule.js` is where you should look for student-related frontend logic.
 - **`/src/services/APIClient.js`**: The single source of truth for all API communication. Add new integration methods here.
-- **`/gyanam-backend/app/Http/Controllers/Api/`**: Laravel controllers handling the business logic.
+- **`/backend/app/Http/Controllers/Api/`**: Laravel controllers handling the business logic.
 
 ---
 
 ## ⚠️ Important Considerations
-1. **CORS**: You must update `gyanam-backend/config/cors.php` to allow the domain of the external portal.
+1. **CORS**: You must update `backend/config/cors.php` to allow the domain of the external portal.
 2. **Environment**: Ensure both systems share the same database or use a secure webhook system to keep data in sync.
 3. **Transactions**: The `StudentExamController.php` uses DB transactions to ensure results are only saved if the entire submission process succeeds. Maintain this pattern for data integrity.

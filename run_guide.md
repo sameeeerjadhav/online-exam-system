@@ -8,8 +8,7 @@ To test the Gyanam Exam Portal on your machine, you need to run three separate c
 This server handles the database logic, authentication, students, questions, and saving exam results.
 
 ```bash
-cd "gyanam-backend"
-php artisan serve --port=8000
+cd "backend"
 ```
 > **Base URL:** `http://localhost:8000`
 
@@ -19,8 +18,7 @@ php artisan serve --port=8000
 This server pushes real-time updates (like seeing students log in and take their exams) directly to the Live Monitoring page in the admin portal.
 
 ```bash
-cd "gyanam-backend"
-php artisan reverb:start --port=6001 --host=127.0.0.1
+cd "backend"
 ```
 > **WebSocket URL:** `ws://127.0.0.1:6001`
 
